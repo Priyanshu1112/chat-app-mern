@@ -37,7 +37,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/index", (req, res) => {
-  res.send("MERN-CHAT-APP");
+  res.send("MERN-CHAT-APP-Backend");
 });
 app.use("/user", usersRouter);
 app.use("/chat", require("./routes/chat"));
