@@ -18,6 +18,8 @@ const Sidebar = () => {
   const { refresh, conversations, setConversations, unreadConversation } =
     useContext(Context);
 
+    console.log(typeof conversations);
+
   const userData = JSON.parse(localStorage.getItem("userData"));
 
   useEffect(() => {
@@ -51,6 +53,7 @@ const Sidebar = () => {
           headers: { Authorization: `Bearer ${userData.token}` },
         })
         .then((res) => {
+          console.log({conversations: res.data});
           setConversations(res.data);
         });
     }
@@ -61,7 +64,7 @@ const Sidebar = () => {
       <div className="sb-header">
         <div>
           <IconButton>
-            <AccountCircle fontSize="large" /> <span style={{fontSize : '1.2rem', marginLeft : '1rem'}}>{userData.name}</span>
+            <AccountCircle fontSize="large" /> <span style={{fontSize : '1.5rem', marginLeft : '1rem'}}>{userData.name}</span>
           </IconButton>
         </div>
         <div>
@@ -91,7 +94,7 @@ const Sidebar = () => {
         <input type="text" placeholder="Search" className="search-box" />
       </div>
       <div className="sb-conversations">
-        {conversations?.map((conversation, ind) => {
+        {conversations && conversations?.map((conversation, ind) => {
           if (!conversation.isGroupChat) {
             conversation.users.map((user) => {
               if (user._id != userData._id) {
