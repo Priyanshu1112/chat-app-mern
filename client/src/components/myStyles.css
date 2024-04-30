@@ -1,0 +1,356 @@
+.main-container {
+  background: #f4f5f8;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-container {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+}
+
+.sb-header {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 5px;
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sb-search {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.sb-conversations {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 10px;
+  flex: 1;
+  overflow-y: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.conversation-container {
+  display: grid;
+  grid-template-columns: 32px auto auto;
+  grid-template-rows: auto auto;
+  column-gap: 10px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s all;
+}
+
+.conversation-container-hover:hover {
+  cursor: pointer;
+
+  background: rgba(9, 9, 9, 0.1);
+}
+
+.con-icon {
+  grid-area: 1/1/3/2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: capitalize;
+
+  background: #d9d9d9;
+
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  height: 32px;
+  width: 32px;
+  padding: 2px;
+
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.con-title {
+  grid-area: 1/2/2/4;
+
+  text-transform: capitalize;
+
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.con-timeStamp {
+  justify-self: flex-end;
+  font-size: 0.75rem;
+
+  /* margin-right: 5px; */
+
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.con-lastMessage {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.9rem;
+}
+
+.online-status, .offline-status {
+  /* justify-self: flex-end !important; */
+  flex: 1;
+  text-align: end;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.offline-status{
+  color: gray;
+}
+
+.chatArea-container {
+  display: flex;
+  flex: 0.7;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chatArea-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-text {
+  flex: 1;
+  margin-left: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.messages-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.other-message-container {
+  align-self: flex-start;
+}
+
+.other-text-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  border-radius: 20px 20px 20px 0;
+  background: #eeecec;
+}
+
+.self-message-container {
+  align-self: flex-end;
+  background: #71f1c6;
+  padding: 10px;
+  border-radius: 20px 20px 0 20px;
+}
+
+.messageBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.self-timeStamp {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.text-input-area {
+  background: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-input-area > input {
+  flex: 1;
+}
+
+.welcome-container {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.54);
+  border-bottom: 5px solid #63d7b0;
+  border-radius: 20px;
+}
+
+.welcome-logo {
+  height: 20vw;
+}
+
+.create-groups-container {
+  flex: 0.7;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.create-groups-container > div {
+  background: white;
+  border-radius: 20px;
+  width: 95%;
+  display: flex;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.create-groups-container > div > input {
+  flex: 1;
+}
+
+.login-container {
+  height: 90vh;
+  width: 90vw;
+  background-color: #f4f5f8;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  flex: 0.3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.login-box {
+  flex: 0.7;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(62, 183, 152);
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.list-container {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lc-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-container > .sb-search > input {
+  flex: 1;
+}
+
+.ug-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.list-item {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border-radius: 20px;
+  transition: 0.3s all;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.54);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-item:hover {
+  background-color: rgba(9, 9, 9, 0.1);
+}
+
+.not-found {
+  width: 90vw;
+  height: 90vh;
+  background: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.unread {
+  background: #95f6d5;
+  transform: scale(1.05);
+}
